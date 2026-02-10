@@ -1,6 +1,9 @@
 # What Really Drives Economic Prosperity? Insights from World Bank Data
 
-![Electricity access vs GDP per capita](figures/usage_vs_gdp.jpg)
+<p align="center">
+  <img src="figures/usage_vs_gdp.jpg" width="650">
+</p>
+<p align="center"><em>Figure 1: Electricity access versus GDP per capita (log scale)</em></p>
 
 Understanding what drives economic prosperity is a core challenge for policymakers, development economists, and international organizations. Using publicly available World Bank indicators, this analysis explores which development factors are most closely associated with GDP per capita, how these relationships behave at different levels of development, and how predictive modeling can be used to simulate improvement scenarios.
 
