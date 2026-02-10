@@ -1,7 +1,7 @@
 # What Really Drives Economic Prosperity? Insights from World Bank Data
 
 <p align="center">
-  <img src="figures/usage_vs_gdp.jpg" width="650">
+  <img src="figures/access_vs_gdp.jpg" width="650">
 </p>
 <p align="center"><em>Figure 1: Electricity access versus GDP per capita (log scale)</em></p>
 
@@ -11,9 +11,20 @@ The analysis focuses on four practical business questions and combines explorato
 
 ---
 
+> **Data & Methodology Summary**
+> - Source: World Bank Development Indicators  
+> - Target variable: GDP per capita (log₁₀ USD)  
+> - Correlation method: Spearman rank correlation  
+> - Model evaluation: R², RMSE, MAE
+
+--
+
 ## Question 1: Which development indicators are most strongly associated with GDP per capita?
 
-![Spearman correlation ranking](figures/spearman_corr_plot.jpg)
+<p align="center">
+  <img src="figures/spearman_corr_plot" width="650">
+</p>
+<p align="center"><em>Figure 2: Spearman Correlation PLot</em></p>
 
 To identify the strongest associations with GDP per capita, Spearman rank correlations were calculated between economic output and a set of development indicators. Spearman correlation was chosen because it captures monotonic relationships and is less sensitive to outliers and non-linear patterns than Pearson correlation.
 
@@ -23,7 +34,11 @@ All variables were analyzed on a logarithmic scale to account for skewed distrib
 
 ## Question 2: Does increasing electricity access always lead to higher income levels?
 
-![Electricity usage vs GDP per capita](figures/access_vs_gdp.jpg)
+<p align="center">
+  <img src="figures/usage_vs_gdp.jpg" width="650">
+</p>
+<p align="center"><em>Figure 3: Electricity usage versus GDP per capita (log scale)</em></p>
+
 
 While electricity access shows a strong overall relationship with GDP per capita, the scatter plot reveals an important non-linear pattern. At lower levels of access, increases in electricity coverage are associated with substantial gains in income. However, once electricity access approaches universal levels, the relationship begins to flatten.
 
