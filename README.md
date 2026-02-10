@@ -1,6 +1,6 @@
 # What Really Drives Economic Prosperity? Insights from World Bank Data
 
-[INSERT FIGURE HERE — Scatter plot: log(GDP per capita) vs log(Electricity access)]
+![Electricity access vs GDP per capita](figures/usage_vs_gdp.jpg)
 
 Understanding what drives economic prosperity is a core challenge for policymakers, development economists, and international organizations. Using publicly available World Bank indicators, this analysis explores which development factors are most closely associated with GDP per capita, how these relationships behave at different levels of development, and how predictive modeling can be used to simulate improvement scenarios.
 
@@ -10,7 +10,7 @@ The analysis focuses on four practical business questions and combines explorato
 
 ## Question 1: Which development indicators are most strongly associated with GDP per capita?
 
-[INSERT FIGURE HERE — Spearman correlation ranking (bar chart or table)]
+![Spearman correlation ranking](figures/spearman_corr_plot.jpg)
 
 To identify the strongest associations with GDP per capita, Spearman rank correlations were calculated between economic output and a set of development indicators. Spearman correlation was chosen because it captures monotonic relationships and is less sensitive to outliers and non-linear patterns than Pearson correlation.
 
@@ -20,9 +20,7 @@ All variables were analyzed on a logarithmic scale to account for skewed distrib
 
 ## Question 2: Does increasing electricity access always lead to higher income levels?
 
-RMSE (log10 USD): 0.112356
-MAE  (log10 USD): 0.064585
-R2:              0.968776
+![Electricity usage vs GDP per capita](figures/access_vs_gdp.jpg)
 
 While electricity access shows a strong overall relationship with GDP per capita, the scatter plot reveals an important non-linear pattern. At lower levels of access, increases in electricity coverage are associated with substantial gains in income. However, once electricity access approaches universal levels, the relationship begins to flatten.
 
@@ -32,7 +30,9 @@ This pattern suggests diminishing returns: electricity access is a critical enab
 
 ## Question 3: Which countries significantly over- or under-perform relative to expectations?
 
-[INSERT FIGURE HERE — Table or plot of residuals from the predictive model]
+RMSE (log10 USD): 0.112356
+MAE  (log10 USD): 0.064585
+R2:              0.968776
 
 To explore deviations from expected outcomes, residuals from the predictive model were examined. These residuals highlight countries whose actual GDP per capita is significantly higher or lower than what the model predicts based on observable development indicators.
 
