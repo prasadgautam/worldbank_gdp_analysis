@@ -90,4 +90,4 @@ This analysis shows that basic infrastructure and human development indicators a
 
 Predictive modeling provides a useful framework for understanding these relationships and for exploring hypothetical improvement scenarios, while also underscoring the importance of country-specific factors that extend beyond measurable indicators.
 
-📓 **Full analysis notebook:** [worldbank_analysis.ipynb](worldbank_analysis.ipynb)
+📓 **Full analysis notebook:** [worldbank_analysis.ipynb](worldbank_data_analysis.ipynb)
