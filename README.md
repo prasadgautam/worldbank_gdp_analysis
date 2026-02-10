@@ -89,3 +89,5 @@ This scenario is illustrative rather than causal and assumes no interaction effe
 This analysis shows that basic infrastructure and human development indicators are strongly associated with economic prosperity, particularly at lower levels of development. However, the benefits of individual indicators tend to diminish as countries approach saturation, highlighting the need for broader, multi-dimensional growth strategies.
 
 Predictive modeling provides a useful framework for understanding these relationships and for exploring hypothetical improvement scenarios, while also underscoring the importance of country-specific factors that extend beyond measurable indicators.
+
+📓 **Full analysis notebook:** [worldbank_analysis.ipynb](worldbank_analysis.ipynb)
