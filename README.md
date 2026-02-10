@@ -1,9 +1,9 @@
 # What Really Drives Economic Prosperity? Insights from World Bank Data
 
 <p align="center">
-  <img src="figures/access_vs_gdp.jpg" width="650">
+  <img src="figures/usage_vs_gdp.jpg" width="650">
 </p>
-<p align="center"><em>Figure 1: Electricity access versus GDP per capita (log scale)</em></p>
+<p align="center"><em>Figure 1: Electricity usage versus GDP per capita (log scale)</em></p>
 
 Understanding what drives economic prosperity is a core challenge for policymakers, development economists, and international organizations. Using publicly available World Bank indicators, this analysis explores which development factors are most closely associated with GDP per capita, how these relationships behave at different levels of development, and how predictive modeling can be used to simulate improvement scenarios.
 
@@ -22,7 +22,7 @@ The analysis focuses on four practical business questions and combines explorato
 ## Question 1: Which development indicators are most strongly associated with GDP per capita?
 
 <p align="center">
-  <img src="figures/spearman_corr_plot" width="650">
+  <img src="figures/spearman_corr_plot.jpg" width="650">
 </p>
 <p align="center"><em>Figure 2: Spearman Correlation PLot</em></p>
 
@@ -35,9 +35,9 @@ All variables were analyzed on a logarithmic scale to account for skewed distrib
 ## Question 2: Does increasing electricity access always lead to higher income levels?
 
 <p align="center">
-  <img src="figures/usage_vs_gdp.jpg" width="650">
+  <img src="figures/access_vs_gdp.jpg" width="650">
 </p>
-<p align="center"><em>Figure 3: Electricity usage versus GDP per capita (log scale)</em></p>
+<p align="center"><em>Figure 3: Electricity access versus GDP per capita (log scale)</em></p>
 
 
 While electricity access shows a strong overall relationship with GDP per capita, the scatter plot reveals an important non-linear pattern. At lower levels of access, increases in electricity coverage are associated with substantial gains in income. However, once electricity access approaches universal levels, the relationship begins to flatten.
@@ -62,17 +62,21 @@ Such deviations indicate that while development indicators explain a large porti
 
 The predictive model achieves strong overall performance:
 
-- **R²:** 0.968  
-- **RMSE (log₁₀ USD):** 0.112  
-- **Typical multiplicative error:** approximately ×1.30  
+| Metric | Value |
+|------|------:|
+| RMSE (log₁₀ USD) | 0.112 |
+| MAE (log₁₀ USD) | 0.065 |
+| R² | 0.969 | 
 
 These results indicate that the model explains most of the variation in GDP per capita across countries, while still allowing for meaningful uncertainty at the individual country level.
 
 ### Scenario simulation
 
-Baseline predicted GDP per capita: $4,302
-Improved predicted GDP per capita: $7,926
-Predicted change: 84.3%
+| Scenario | Predicted GDP per capita (USD) |
+|--------|-------------------------------:|
+| Baseline | $4,302 |
+| Improved indicators | $7,926 |
+| **Percentage change** | **+84.3%** |
 
 To illustrate how improvements in development indicators could translate into economic outcomes, a hypothetical scenario was constructed by incrementally increasing selected features while holding all others constant. Under this scenario, the model predicts a substantial increase in GDP per capita, corresponding to an improvement of approximately 84% relative to the baseline prediction.
 
