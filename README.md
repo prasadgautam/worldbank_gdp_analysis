@@ -1,94 +1,31 @@
-# What Really Drives Economic Prosperity? Insights from World Bank Data
+# World Bank GDP Analysis
 
-<p align="center">
-  <img src="figures/usage_vs_gdp.jpg" width="650">
-</p>
-<p align="center"><em>Figure 1: Electricity usage versus GDP per capita (log scale)</em></p>
+## Motivation
+This project investigates the relationship between development indicators and GDP per capita using World Bank Development Indicators data. The goal is to identify key drivers of economic prosperity and explore how improvements in selected indicators could impact income levels across countries.
 
-Understanding what drives economic prosperity is a core challenge for policymakers, development economists, and international organizations. Using publicly available World Bank indicators, this analysis explores which development factors are most closely associated with GDP per capita, how these relationships behave at different levels of development, and how predictive modeling can be used to simulate improvement scenarios.
+## Libraries Used
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
 
-The analysis focuses on four practical business questions and combines exploratory data analysis with predictive modeling to produce interpretable, real-world insights.
+## Files in this Repository
+- `worldbank_data_analysis.ipynb`  
+  Jupyter notebook containing the full exploratory analysis, modeling, and scenario simulations.
 
----
+- `world_bank_data.csv`  
+  Cleaned dataset used in the analysis.
 
-> **Data & Methodology Summary**
-> - Source: World Bank Development Indicators  
-> - Target variable: GDP per capita (log₁₀ USD)  
-> - Correlation method: Spearman rank correlation  
-> - Model evaluation: R², RMSE, MAE
+- `figures/`  
+  Saved plots and tables generated from the analysis.
 
---
+## Results Summary
+The analysis shows that infrastructure access, education, and health indicators are strongly associated with GDP per capita, particularly at lower levels of development. A predictive model explains a large share of cross-country variation and is used to simulate hypothetical improvement scenarios.
 
-## Question 1: Which development indicators are most strongly associated with GDP per capita?
+## Blog Post
+A detailed, non-technical discussion of the findings and their implications is available here:  
+👉 **[[Medium Blog](https://medium.com/p/7ccb5f17b1fb?postPublishedType=initial)]**
 
-<p align="center">
-  <img src="figures/spearman_corr_plot.jpg" width="650">
-</p>
-<p align="center"><em>Figure 2: Spearman Correlation PLot</em></p>
-
-To identify the strongest associations with GDP per capita, Spearman rank correlations were calculated between economic output and a set of development indicators. Spearman correlation was chosen because it captures monotonic relationships and is less sensitive to outliers and non-linear patterns than Pearson correlation.
-
-All variables were analyzed on a logarithmic scale to account for skewed distributions and large cross-country differences. The results show that indicators related to infrastructure access, education, and health tend to have the strongest associations with GDP per capita, suggesting these factors play a central role in economic development.
-
----
-
-## Question 2: Does increasing electricity access always lead to higher income levels?
-
-<p align="center">
-  <img src="figures/access_vs_gdp.jpg" width="650">
-</p>
-<p align="center"><em>Figure 3: Electricity access versus GDP per capita (log scale)</em></p>
-
-
-While electricity access shows a strong overall relationship with GDP per capita, the scatter plot reveals an important non-linear pattern. At lower levels of access, increases in electricity coverage are associated with substantial gains in income. However, once electricity access approaches universal levels, the relationship begins to flatten.
-
-This pattern suggests diminishing returns: electricity access is a critical enabling factor for growth in lower-income countries, but beyond a certain point, additional gains in income depend more heavily on other structural and institutional factors.
-
----
-
-## Question 3: Which countries appear as interesting outliers relative to development indicators?
-
-<p align="center">
-  <img src="figures/outliers_table.png" width="750">
-</p>
-<p align="center"><em>Figure 4: Countries identified as “interesting cases” using the outlier_score heuristic</em></p>
-
-To identify countries that behave differently from overall global patterns, an outlier detection heuristic was applied. This approach highlights countries with unusually high GDP per capita relative to indicators such as life expectancy and unemployment, as well as countries that underperform economically despite relatively strong social indicators.
-
-These “interesting cases” illustrate that while development indicators explain much of the variation in economic outcomes, country-specific factors—such as institutional quality, policy choices, historical context, or external shocks—can lead to meaningful deviations from expected patterns.
-
----
-
-## Question 4: How accurately can GDP per capita be predicted, and what if key indicators improve?
-
-The predictive model achieves strong overall performance:
-
-| Metric | Value |
-|------|------:|
-| RMSE (log₁₀ USD) | 0.112 |
-| MAE (log₁₀ USD) | 0.065 |
-| R² | 0.969 | 
-
-These results indicate that the model explains most of the variation in GDP per capita across countries, while still allowing for meaningful uncertainty at the individual country level.
-
-### Scenario simulation
-
-| Scenario | Predicted GDP per capita (USD) |
-|--------|-------------------------------:|
-| Baseline | $4,302 |
-| Improved indicators | $7,926 |
-| **Percentage change** | **+84.3%** |
-
-To illustrate how improvements in development indicators could translate into economic outcomes, a hypothetical scenario was constructed by incrementally increasing selected features while holding all others constant. Under this scenario, the model predicts a substantial increase in GDP per capita, corresponding to an improvement of approximately 84% relative to the baseline prediction.
-
-This scenario is illustrative rather than causal and assumes no interaction effects or structural changes. Nevertheless, it demonstrates how predictive models can be used to explore the potential magnitude of development improvements.
-
----
-
-## Conclusion
-
-This analysis shows that basic infrastructure and human development indicators are strongly associated with economic prosperity, particularly at lower levels of development. However, the benefits of individual indicators tend to diminish as countries approach saturation, highlighting the need for broader, multi-dimensional growth strategies.
-
-Predictive modeling provides a useful framework for understanding these relationships and for exploring hypothetical improvement scenarios, while also underscoring the importance of country-specific factors that extend beyond measurable indicators.
-
-📓 **Full analysis notebook:** [worldbank_analysis.ipynb](worldbank_data_analysis.ipynb)
+## Acknowledgements
+World Bank Development Indicators dataset.
