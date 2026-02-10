@@ -46,15 +46,16 @@ This pattern suggests diminishing returns: electricity access is a critical enab
 
 ---
 
-## Question 3: Which countries significantly over- or under-perform relative to expectations?
+## Question 3: Which countries appear as interesting outliers relative to development indicators?
 
-RMSE (log10 USD): 0.112356
-MAE  (log10 USD): 0.064585
-R2:              0.968776
+<p align="center">
+  <img src="figures/outliers_table.png" width="750">
+</p>
+<p align="center"><em>Figure 4: Countries identified as “interesting cases” using the outlier_score heuristic</em></p>
 
-To explore deviations from expected outcomes, residuals from the predictive model were examined. These residuals highlight countries whose actual GDP per capita is significantly higher or lower than what the model predicts based on observable development indicators.
+To identify countries that behave differently from overall global patterns, an outlier detection heuristic was applied. This approach highlights countries with unusually high GDP per capita relative to indicators such as life expectancy and unemployment, as well as countries that underperform economically despite relatively strong social indicators.
 
-Such deviations indicate that while development indicators explain a large portion of income variation, country-specific factors—such as governance, policy choices, historical context, or external shocks—also play an important role and are not fully captured by the model.
+These “interesting cases” illustrate that while development indicators explain much of the variation in economic outcomes, country-specific factors—such as institutional quality, policy choices, historical context, or external shocks—can lead to meaningful deviations from expected patterns.
 
 ---
 
